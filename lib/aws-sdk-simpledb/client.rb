@@ -5,6 +5,7 @@
 #
 # WARNING ABOUT GENERATED CODE
 
+require_relative 'metadata_handler.rb'
 require 'seahorse/client/plugins/content_length.rb'
 require 'aws-sdk-core/plugins/credentials_configuration.rb'
 require 'aws-sdk-core/plugins/logging.rb'
@@ -293,6 +294,7 @@ module Aws::SimpleDB
     # @param [Hash] params ({})
     def batch_delete_attributes(params = {}, options = {})
       req = build_request(:batch_delete_attributes, params)
+      req.handlers.add(MetadataHandler, priority: 0)
       req.send_request(options)
     end
 
@@ -374,6 +376,7 @@ module Aws::SimpleDB
     # @param [Hash] params ({})
     def batch_put_attributes(params = {}, options = {})
       req = build_request(:batch_put_attributes, params)
+      req.handlers.add(MetadataHandler, priority: 0)
       req.send_request(options)
     end
 
@@ -467,6 +470,7 @@ module Aws::SimpleDB
     # @param [Hash] params ({})
     def delete_attributes(params = {}, options = {})
       req = build_request(:delete_attributes, params)
+      req.handlers.add(MetadataHandler, priority: 0)
       req.send_request(options)
     end
 
@@ -578,6 +582,7 @@ module Aws::SimpleDB
     # @param [Hash] params ({})
     def get_attributes(params = {}, options = {})
       req = build_request(:get_attributes, params)
+      req.handlers.add(MetadataHandler, priority: 0)
       req.send_request(options)
     end
 
@@ -697,6 +702,7 @@ module Aws::SimpleDB
     # @param [Hash] params ({})
     def put_attributes(params = {}, options = {})
       req = build_request(:put_attributes, params)
+      req.handlers.add(MetadataHandler, priority: 0)
       req.send_request(options)
     end
 
@@ -752,6 +758,7 @@ module Aws::SimpleDB
     # @param [Hash] params ({})
     def select(params = {}, options = {})
       req = build_request(:select, params)
+      req.handlers.add(MetadataHandler, priority: 0)
       req.send_request(options)
     end
 
